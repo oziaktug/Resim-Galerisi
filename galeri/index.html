@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resim Galerisi</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+
+  <div class="container text-center">
+    <h1>Resim Galerisi</h1>
+    <div class="gallery">
+      <img src="image/1.png" alt="Resim 1" data-toggle="modal" data-target="#imageModal" onclick="showImage(this)">
+      <img src="image/2.png" alt="Resim 2" data-toggle="modal" data-target="#imageModal" onclick="showImage(this)">
+      <img src="image/3.png" alt="Resim 3" data-toggle="modal" data-target="#imageModal" onclick="showImage(this)">
+      <img src="image/4.png" alt="Resim 4" data-toggle="modal" data-target="#imageModal" onclick="showImage(this)">
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="imageModal" tabindex="-1" role="dialog" aria-labelledby="imageModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content bg-dark">
+        <div class="modal-header">
+          <h5 class="modal-title" id="imageModalLabel">Resim Görüntüleme</h5>
+          <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body text-center">
+          <img id="modalImage" src="" alt="Seçili Resim">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <script>
+    function showImage(element) {
+      const modalImage = document.getElementById("modalImage");
+      modalImage.src = element.src;
+    }
+  </script>
+
+</body>
+</html>
