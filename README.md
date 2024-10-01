@@ -1,2 +1,2 @@
-# Kendimi geliştirmek üzere başladığım bu yolda ufak bir çalışmam
+# Kendimi geliştirmek üzere başladığım bu yolda ufak bir çalışmam.
 
